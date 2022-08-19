@@ -37,7 +37,7 @@ function App() {
     useEffect(() => {
       setLoading(true);
       async function fetchMyAPI() {
-        setMovieData( await fetch("https://api.themoviedb.org/3/movie/10116?api_key=0c0ed66de9196e5f32c517d504323737")
+        setMovieData( await fetch("https://api.themoviedb.org/3/movie/10116?api_key={apikey}")
         .then(res => res.json())
         .then((data) => data as MovieDb))
       }
